@@ -18,7 +18,7 @@ public abstract class Actor {
     /**
      * The current health level of this actor. Must be non-negative.
      */
-    private int health;
+    int health;
 
     /**
      * The game engine that created this Actor.
