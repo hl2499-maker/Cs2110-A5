@@ -7,12 +7,13 @@ public abstract class Mage extends Player {
         super(name, engine);
 
     }
-    public void chooseAction() {
+    public boolean chooseAction() {
         System.out.print("Would you like to cast a"+this.Spellname+" ");
         String indicator= engine.getInputLine();
         if (indicator.equals("yes")) {
             willcast = true;
         }
+        return false;
     }
 
 }

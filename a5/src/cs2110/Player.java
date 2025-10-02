@@ -60,6 +60,8 @@ public abstract class Player extends Actor {
      * and potentially carries out the action of their choice. The available actions are determined
      * by the Player's subtype. Returns `true` if the chosen action is followed by an attack phase
      * and `false` if the chosen action completes the player's turn.
+     *
+     * @return
      */
-    public abstract void chooseAction();
+    public abstract boolean chooseAction();
 }
