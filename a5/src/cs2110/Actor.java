@@ -63,7 +63,7 @@ public abstract class Actor {
      * Launches an attack against the given `target`. A random attack roll is calculated using this
      * actor's `power()` and sent to the `target` to `defend()`.
      */
-    protected final void attack(Actor target) {
+    protected void attack(Actor target) {
         int attackRoll = engine.diceRoll(1, power());
         target.defend(attackRoll);
     }
