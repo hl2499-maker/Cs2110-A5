@@ -2,22 +2,21 @@ package cs2110;
 
 public abstract class Mage extends Player {
 
-    private String Spellname;
-//    private boolean willcast;
-
     public Mage(String name, GameEngine engine) {
         super(name, engine);
-
     }
 
     public boolean chooseAction() {
-        System.out.print("Would you like to cast a" + this.Spellname + " ");
+        System.out.print("Would you like to cast a " + spellName() + " (yes/no)? ");
         String indicator = engine.getInputLine();
         if (indicator.equals("yes")) {
-            return true;
+            useSpell();
+            return false;
         }
-        return false;
+        return true;
     }
+
+    protected abstract String spellName();
 
     protected abstract void useSpell();
 }

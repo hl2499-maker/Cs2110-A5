@@ -1,15 +1,20 @@
 package cs2110;
 
 public class FireMage extends Mage {
-    private String spellname="Fireball";
     public FireMage(String name, GameEngine engine) {
         super(name, engine);
     }
 
     @Override
-    protected void attack(Actor target) {
-        int attackRoll = engine.diceRoll(1, power());
-        target.defend(2*attackRoll);
+    protected String spellName() {
+        return "fire ball";
+    }
+
+    @Override
+    protected void useSpell() {
+        Monster target = engine.selectMonsterTarget();
+        int attackRoll = 2 * engine.diceRoll(1, power());
+        target.defend(attackRoll);
         this.takeDamage((int)(attackRoll/4));
     }
 
