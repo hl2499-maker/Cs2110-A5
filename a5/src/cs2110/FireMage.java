@@ -7,7 +7,7 @@ public class FireMage extends Mage {
 
     @Override
     protected String spellName() {
-        return "fire ball";
+        return "fire spell";
     }
 
     @Override
